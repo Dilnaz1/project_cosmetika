@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href = "@{/css/bootstrap.min.css}" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="form-group">
+            <form action="#" th:action="@{/lesson/editLesson}" th:object = "${lesson}" method="POST">
+                <label for="lessonname">Lesson Name</label>
+                <input type="text" id="lessonname" name="lessonname" th:field = "*{lesson_name}" class="form-control" placeholder="Пәннің атын еңгіз" value="${lesson.lesson_name}" />
+
+                <label for="lessonteacher">Lesson Teacher</label>
+                <input type="text" id="lessonteacher" name="lessonteacher" th:field = "*{lesson_teacher}" class="form-control" placeholder="Мұғалімді еңгіз" value="${lesson.lesson_teacher}"/>
+
+                <label for="lessonfinishtime">Lesson finishtime</label>
+                <input type="text" id="lessonfinishtime" name="lesssonfinishtime" th:field = "*{lesson_finishtime}" class="form-control" placeholder="Созылатын уакытын еңгіз" value="${lesson.lesson_finishtime}"/>
+
+                <label for="time">time</label>
+                <input type="text" id="time" name="time" th:field = "*{time}" class="form-control" placeholder="Сабақ болатын уақыт" value="${lesson.time}"/>
+                <br/>
+                <button type="submit" class="btn btn-primary">Сақтау</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script th:src = "@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+</body>
+</html>

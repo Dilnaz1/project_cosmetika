@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href = "@{/css/bootstrap.min.css}" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="form-group">
+            <form action="#" th:action="@{/food/editFood}" th:object = "${food}" method="POST">
+                <label for="foodname">Food Name</label>
+                <input type="text" id="foodname" name="foodname" th:field = "*{food_name}" class="form-control" placeholder="Тағам атын еңгіз" value="${food.food_name}" />
+
+                <label for="foodclient">Food Client</label>
+                <input type="text" id="foodclient" name="foodclient" th:field = "*{food_client}" class="form-control" placeholder="Клиентті еңгіз" value="${food.food_client}"/>
+
+                <label for="foodcost">Food finishtime</label>
+                <input type="text" id="foodfinishtime" name="lesssoncost" th:field = "*{food_cost}" class="form-control" placeholder="Тағам бағасы" value="${food.food_cost}"/>
+
+                <label for="time">time</label>
+                <input type="text" id="time" name="time" th:field = "*{time}" class="form-control" placeholder="Тағамды ішетін уақыт" value="${food.time}"/>
+                <br/>
+                <button type="submit" class="btn btn-primary">Сақтау</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script th:src = "@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+</body>
+</html>
