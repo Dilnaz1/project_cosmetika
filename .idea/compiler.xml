@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="project060318" />
+        <module name="project_cosmetika" />
         <module name="project_ecofood" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="project060318" target="9" />
+      <module name="project_cosmetika" target="9" />
       <module name="project_ecofood" target="9" />
     </bytecodeTargetLevel>
   </component>

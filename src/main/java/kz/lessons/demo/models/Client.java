@@ -1,7 +1,5 @@
 package kz.lessons.demo.models;
 
-
-
 import javax.persistence.*;
 import java.util.Set;
 
@@ -13,7 +11,7 @@ public class Client {
     private String firstName ;
     private String lastName ;
     private String email ;
-    private Set<Food> food;
+    private Set<Cosmetika> cosmetika;
 
 
     public Client(){}
@@ -57,20 +55,20 @@ public class Client {
     }
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
-    public Set<Food> getFood() {
-        return food;
+    public Set<Cosmetika> getCosmetika() {
+        return cosmetika;
     }
 
-    public void setFood(Set<Food> food) {
-        this.food = food;
+    public void setFood(Set<Cosmetika> food) {
+        this.cosmetika = food;
     }
 
     @Override
     public String toString() {
         String result = String.format("Category[id=%d, firstName='%s', lastName='%a', email='%e']%n", id, firstName, lastName, email);
-        if (food != null) {
-            for(Food food : food) {
-                result += String.format("Food[food_id=%d, food_name='%s', food_finishtime='%g',time='%y']%n", food.getFood_id(), food.getfood_name(), food.getFood_finishtime(), food.getTime());
+        if (cosmetika != null) {
+            for(Cosmetika cosmetika : cosmetika) {
+                result += String.format("Cosmetika[cosmetika_id=%d, cosmetika_name='%s', cosmetika_finishtime='%g',time='%y']%n", cosmetika.getCosmetika_id(), cosmetika.getCosmetika_name(), cosmetika.getCosmetika_finishtime(), cosmetika.getTime());
             }
         }
 

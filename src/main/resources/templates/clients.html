@@ -16,12 +16,12 @@
                 <th>email</th>
             </tr>
             <tr th:each = "teacher : ${teachers}">
-                <td th:text = "${teacher.firstName}">First Name</td>
-                <td th:text = "${teacher.lastName}">Last Name</td>
-                <td th:text = "${teacher.email}">E-mail</td>
+                <td th:text = "${client.firstName}">First Name</td>
+                <td th:text = "${client.lastName}">Last Name</td>
+                <td th:text = "${client.email}">E-mail</td>
                 <td> <a href = '/demo/add'>Add</a></td>
-                <td> <a th:href="@{'/demo/editTeacher?id='+${teacher.id}}">Edit</a></td>
-                <td> <a th:href = "@{'/demo/deleteTeacher?id='+${teacher.id}}">Delete</a></td>
+                <td> <a th:href="@{'/demo/editClient?id='+${client.id}}">Edit</a></td>
+                <td> <a th:href = "@{'/demo/deleteClient?id='+${client.id}}">Delete</a></td>
             </tr>
         </table>
     </div>
